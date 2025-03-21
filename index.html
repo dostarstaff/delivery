@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ДОСТАР - Доставка еды</title>
+    <title>Главная - ДОСТАР</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,16 +14,39 @@
         }
         .navbar {
             background-color: #005500;
-            padding: 10px 0;
+            padding: 5px 0; /* Уменьшен отступ сверху и снизу */
+            display: flex;
+            justify-content: center;
+            gap: 5px; /* Разделяет элементы */
+            flex-wrap: wrap; /* Позволяет переносить элементы на новые строки */
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            font-size: 1.2rem;
+            padding: 8px 12px; /* Уменьшен внутренний отступ */
+            font-size: 1rem;
+            display: block;
         }
         .navbar a:hover {
             background-color: green;
+        }
+        .content {
+            margin: 10px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar a {
+                padding: 10px 15px;
+                font-size: 1rem;
+                width: 100%; /* Кнопки занимают всю ширину */
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -35,9 +58,10 @@
         <a href="about.html">О нас</a>
     </div>
 
-    <h1>"ДОСТАР"</h1>
-    <p>ДОСТАВКА ЕДЫ</p>
-    <img src="https://i.ibb.co.com/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-    <p>Доставка: Шашлык, фастфуд, чикен, фри...</p>
+    <h1>Добро пожаловать в ДОСТАР</h1>
+    
+    <div class="content">
+        <!-- Здесь можно разместить основной контент -->
+    </div>
 </body>
 </html>
