@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - ДОСТАР</title>
+    <title>Меню - ДОСТАР</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,10 +32,57 @@
         .navbar a:hover {
             background-color: green;
         }
-        .content {
-            margin: 20px;
+        .menu-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .menu-button {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .menu-button:hover, .menu-button.active {
+            background-color: #005500;
+            color: white;
+        }
+        .menu-item {
+            display: none;
+            margin: 20px 0;
+        }
+        .menu-item.active {
+            display: block;
+        }
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px 0;
+        }
+        .description {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            background-color: green;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #005500;
+        }
+        #default-text {
             font-size: 1.2rem;
             color: #555;
+            margin: 20px 0;
         }
         footer {
             background-color: #005500;
@@ -44,36 +91,33 @@
             margin-top: 20px;
         }
         @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column; /* Вертикальное расположение кнопок */
-                align-items: center;
-            }
             .navbar a {
                 padding: 10px 15px;
                 font-size: 1rem;
-                width: 100%; /* Кнопки занимают всю ширину */
-                text-align: center;
             }
-            h1 {
-                font-size: 1.5rem; /* Уменьшаем размер заголовка */
+            .menu-button {
+                padding: 8px 12px;
+                font-size: 0.9rem;
             }
-            .content {
-                font-size: 1rem; /* Уменьшаем размер текста */
+            .description {
+                font-size: 1rem;
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 8px 16px;
             }
         }
     </style>
-    <!-- Подключение Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Навигационная панель -->
     <div class="navbar">
         <a href="index.html"><i class="fas fa-home"></i> Главная</a>
         <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
         <a href="contacts.html"><i class="fas fa-phone"></i> Контакты</a>
         <a href="about.html"><i class="fas fa-info-circle"></i> О нас</a>
     </div>
-
+    
     <h1>Добро пожаловать в ДОСТАР</h1>
     
     <div class="content">
