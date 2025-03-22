@@ -13,7 +13,7 @@
             background-color: #f9f9f9;
         }
         .navbar {
-            background-color: #5F8726;
+            background-color: #008000;
             padding: 10px 0;
             display: flex;
             justify-content: center;
@@ -21,10 +21,10 @@
             flex-wrap: wrap;
         }
         .navbar a {
-            color: #ffff00; /* Жёлтый текст */
+            color: #ffff00;
             text-decoration: none;
             padding: 10px 20px;
-            font-size: 1.5rem; /* Увеличенный размер шрифта */
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -48,7 +48,7 @@
             border-radius: 5px;
         }
         .menu-button:hover, .menu-button.active {
-            background-color: #5F8726;
+            background-color: #008000;
             color: white;
         }
         .menu-item {
@@ -70,14 +70,14 @@
         .btn {
             display: inline-block;
             background-color: green;
-            color: #ffff00; /* Жёлтый текст */
+            color: #ffff00;
             font-size: 1.2rem;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
         }
         .btn:hover {
-            background-color: #5F8726;
+            background-color: #008000;
         }
         #default-text {
             font-size: 1.2rem;
@@ -85,26 +85,30 @@
             margin: 20px 0;
         }
         footer {
-            background-color: #5F8726;
-            color: #ffff00; /* Жёлтый текст */
+            background-color: #008000;
+            color: #ffff00;
             padding: 10px;
             margin-top: 20px;
         }
         @media (max-width: 600px) {
+            .navbar {
+                justify-content: space-between; /* Кнопки по краям */
+                padding: 10px 20px; /* Добавили отступы по бокам */
+            }
             .navbar a {
                 padding: 10px 15px;
-                font-size: 1.2rem; /* Уменьшенный размер шрифта для мобильных */
+                font-size: 1.4rem; /* Увеличили шрифт */
+                position: relative; /* Для разделителя */
             }
-            .menu-button {
-                padding: 8px 12px;
-                font-size: 0.9rem;
-            }
-            .description {
-                font-size: 1rem;
-            }
-            .btn {
-                font-size: 1rem;
-                padding: 8px 16px;
+            .navbar a:first-child::after {
+                content: "";
+                position: absolute;
+                right: -10px; /* Позиция разделителя */
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2px;
+                height: 60%;
+                background-color: white; /* Белая полосочка */
             }
         }
     </style>
@@ -159,7 +163,7 @@
     
     <!-- Футер -->
     <footer>
-        <p>&copy; 2023 ДОСТАР. Все права защищены.</p>
+        <p>&copy; 2025 ДОСТАР. Все права защищены.</p>
     </footer>
 
     <script>
