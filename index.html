@@ -21,10 +21,10 @@
             flex-wrap: wrap;
         }
         .navbar a {
-            color: white;
+            color: #ffff00; /* Жёлтый текст */
             text-decoration: none;
             padding: 10px 20px;
-            font-size: 1.2rem;
+            font-size: 1.5rem; /* Увеличенный размер шрифта */
             display: flex;
             align-items: center;
             gap: 8px;
@@ -70,7 +70,7 @@
         .btn {
             display: inline-block;
             background-color: green;
-            color: white;
+            color: #ffff00; /* Жёлтый текст */
             font-size: 1.2rem;
             text-decoration: none;
             padding: 10px 20px;
@@ -86,14 +86,14 @@
         }
         footer {
             background-color: #5F8726;
-            color: white;
+            color: #ffff00; /* Жёлтый текст */
             padding: 10px;
             margin-top: 20px;
         }
         @media (max-width: 600px) {
             .navbar a {
                 padding: 10px 15px;
-                font-size: 1rem;
+                font-size: 1.2rem; /* Уменьшенный размер шрифта для мобильных */
             }
             .menu-button {
                 padding: 8px 12px;
@@ -111,6 +111,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Навигационная панель -->
     <div class="navbar">
         <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
         <a href="contacts.html"><i class="fas fa-phone"></i> Контакты</a>
@@ -118,27 +119,17 @@
 
     <h1>Меню</h1>
     
+    <!-- Кнопки меню -->
     <div class="menu-buttons">
         <button class="menu-button" onclick="showMenu('food', event)">Готовая еда</button>
-         <button class="menu-button" onclick="showMenu('desserts', event)">Десерты</button>
-         <button class="menu-button" onclick="showMenu('food', event)">Готовая еда</button>
+        <button class="menu-button" onclick="showMenu('desserts', event)">Десерты</button>
+        <button class="menu-button" onclick="showMenu('coffee', event)">Кофе</button>
         <button class="menu-button" onclick="showMenu('kids', event)">Любят дети</button>
     </div>
     
     <div id="default-text">Выберите, что хотите заказать</div>
 
-    <div class="menu-item" id="coffee">
-        <p>Раздел с кофе пока пуст</p>
-    </div>
-
-    <div class="menu-item" id="desserts">
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!">
-            <img src="https://i.ibb.co/7x5287Mw/Aynalaiyn.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Выпечка, торты, десерты от кондитерской "Aynalayin", подробности в WhatsApp. Работаем с 09:00 до 22:00.</div>
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
-    </div>
-
+    <!-- Раздел "Готовая еда" -->
     <div class="menu-item" id="food">
         <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
             <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
@@ -147,10 +138,26 @@
         <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
     </div>
 
+    <!-- Раздел "Десерты" -->
+    <div class="menu-item" id="desserts">
+        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!">
+            <img src="https://i.ibb.co/7x5287Mw/Aynalaiyn.jpg" alt="Заказать в WhatsApp">
+        </a>
+        <div class="description">Выпечка, торты, десерты от кондитерской "Aynalayin", подробности в WhatsApp. Работаем с 09:00 до 22:00.</div>
+        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
+    </div>
+
+    <!-- Раздел "Кофе" -->
+    <div class="menu-item" id="coffee">
+        <p>Раздел с кофе пока пуст</p>
+    </div>
+
+    <!-- Раздел "Любят дети" -->
     <div class="menu-item" id="kids">
         <p>Раздел для детей пока пуст</p>
     </div>
     
+    <!-- Футер -->
     <footer>
         <p>&copy; 2023 ДОСТАР. Все права защищены.</p>
     </footer>
