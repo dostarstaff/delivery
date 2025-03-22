@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ДОСТАР - ваш надежный партнер. Мы предлагаем лучшие услуги и продукты.">
+    <meta name="keywords" content="ДОСТАР, услуги, продукты, контакты, о нас">
+    <meta name="author" content="Ваше Имя">
     <title>Главная - ДОСТАР</title>
     <style>
         body {
@@ -14,16 +17,16 @@
         }
         .navbar {
             background-color: #005500;
-            padding: 5px 0; /* Уменьшен отступ сверху и снизу */
+            padding: 5px 0;
             display: flex;
             justify-content: center;
-            gap: 5px; /* Разделяет элементы */
-            flex-wrap: wrap; /* Позволяет переносить элементы на новые строки */
+            gap: 5px;
+            flex-wrap: wrap;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            padding: 8px 12px; /* Уменьшен внутренний отступ */
+            padding: 8px 12px;
             font-size: 1rem;
             display: block;
         }
@@ -34,8 +37,21 @@
             margin: 10px;
             font-size: 1.2rem;
             color: #555;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
         }
-        /* Адаптивность */
+        .banner img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #005500;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
         @media (max-width: 600px) {
             .navbar {
                 flex-direction: column;
@@ -44,24 +60,43 @@
             .navbar a {
                 padding: 10px 15px;
                 font-size: 1rem;
-                width: 100%; /* Кнопки занимают всю ширину */
+                width: 100%;
                 text-align: center;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .content {
+                font-size: 1rem;
             }
         }
     </style>
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Навигационная панель -->
     <div class="navbar">
-        <a href="index.html">Главная</a>
-        <a href="menu.html">Меню</a>
-        <a href="contacts.html">Контакты</a>
-        <a href="about.html">О нас</a>
+        <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
+        <a href="contacts.html"><i class="fas fa-phone"></i> Контакты</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> О нас</a>
     </div>
 
+    <!-- Заголовок -->
     <h1>Добро пожаловать в ДОСТАР</h1>
-    
+
+    <!-- Основной контент -->
     <div class="content">
-        <!-- Здесь можно разместить основной контент -->
+        <p>Мы рады приветствовать вас на нашем сайте. Здесь вы найдете всю необходимую информацию о наших услугах и продуктах.</p>
     </div>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2025 ДОСТАР. Все права защищены.</p>
+    </footer>
+
+    <!-- Удален скрипт для плавной прокрутки -->
 </body>
 </html>
