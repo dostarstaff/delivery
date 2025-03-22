@@ -44,15 +44,21 @@
             margin-top: 20px;
         }
         @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column; /* Вертикальное расположение кнопок */
+                align-items: center;
+            }
             .navbar a {
                 padding: 10px 15px;
                 font-size: 1rem;
                 width: 100%; /* Кнопки занимают всю ширину */
                 text-align: center;
             }
-            .navbar {
-                flex-direction: column; /* Вертикальное расположение кнопок */
-                align-items: center;
+            h1 {
+                font-size: 1.5rem; /* Уменьшаем размер заголовка */
+            }
+            .content {
+                font-size: 1rem; /* Уменьшаем размер текста */
             }
         }
     </style>
