@@ -15,12 +15,19 @@
         .navbar {
             background-color: #005500;
             padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         .navbar a {
             color: white;
             text-decoration: none;
             padding: 10px 20px;
             font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         .navbar a:hover {
             background-color: green;
@@ -30,20 +37,42 @@
             font-size: 1.2rem;
             color: #555;
         }
+        footer {
+            background-color: #005500;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .navbar a {
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
     </style>
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Навигационная панель с иконками -->
     <div class="navbar">
-        <a href="index.html">Главная</a>
-        <a href="menu.html">Меню</a>
-        <a href="contacts.html">Контакты</a>
-        <a href="about.html">О нас</a>
+        <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
+        <a href="contacts.html"><i class="fas fa-phone"></i> Контакты</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> О нас</a>
     </div>
 
     <h1>О нас</h1>
     
     <div class="content">
-        <!-- Здесь будет информация о компании -->
+        <p>Добро пожаловать в ДОСТАР!</p>
+        <p>Мы — команда профессионалов, которая стремится сделать ваш день лучше. Наши услуги включают доставку вкусной еды, десертов и многое другое.</p>
+        <p>Спасибо, что выбираете нас!</p>
     </div>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2025 ДОСТАР. Все права защищены.</p>
+    </footer>
 </body>
 </html>
