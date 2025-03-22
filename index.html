@@ -14,23 +14,26 @@
         }
         .navbar {
             background-color: #ffff00;
-            padding: 10px 0;
+            padding: 15px 0;
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 20px;
             flex-wrap: wrap;
         }
         .navbar a {
             color: #008528;
             text-decoration: none;
-            padding: 10px 20px;
-            font-size: 1.2rem;
+            padding: 15px 30px;
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
         .navbar a:hover {
             background-color: green;
+            color: white;
         }
         .menu-buttons {
             display: flex;
@@ -92,8 +95,10 @@
         }
         @media (max-width: 600px) {
             .navbar a {
-                padding: 10px 15px;
-                font-size: 1rem;
+                padding: 12px 20px;
+                font-size: 1.2rem;
+                width: 90%;
+                justify-content: center;
             }
             .menu-button {
                 padding: 8px 12px;
@@ -111,6 +116,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Навигационная панель -->
     <div class="navbar">
         <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
         <a href="contacts.html"><i class="fas fa-phone"></i> Контакты</a>
@@ -118,27 +124,17 @@
 
     <h1>Меню</h1>
     
+    <!-- Кнопки меню -->
     <div class="menu-buttons">
-        <button class="menu-button" onclick="showMenu('coffee', event)">Кофе</button>
-        <button class="menu-button" onclick="showMenu('desserts', event)">Десерты</button>
         <button class="menu-button" onclick="showMenu('food', event)">Готовая еда</button>
+        <button class="menu-button" onclick="showMenu('desserts', event)">Десерты</button>
+        <button class="menu-button" onclick="showMenu('coffee', event)">Кофе</button>
         <button class="menu-button" onclick="showMenu('kids', event)">Любят дети</button>
     </div>
     
     <div id="default-text">Выберите, что хотите заказать</div>
 
-    <div class="menu-item" id="coffee">
-        <p>Раздел с кофе пока пуст</p>
-    </div>
-
-    <div class="menu-item" id="desserts">
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!">
-            <img src="https://i.ibb.co/7x5287Mw/Aynalaiyn.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Выпечка, торты, десерты от кондитерской "Aynalayin", подробности в WhatsApp. Работаем с 09:00 до 22:00.</div>
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
-    </div>
-
+    <!-- Раздел "Готовая еда" -->
     <div class="menu-item" id="food">
         <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
             <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
@@ -147,10 +143,26 @@
         <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
     </div>
 
+    <!-- Раздел "Десерты" -->
+    <div class="menu-item" id="desserts">
+        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!">
+            <img src="https://i.ibb.co/7x5287Mw/Aynalaiyn.jpg" alt="Заказать в WhatsApp">
+        </a>
+        <div class="description">Выпечка, торты, десерты от кондитерской "Aynalayin", подробности в WhatsApp. Работаем с 09:00 до 22:00.</div>
+        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
+    </div>
+
+    <!-- Раздел "Кофе" -->
+    <div class="menu-item" id="coffee">
+        <p>Раздел с кофе пока пуст</p>
+    </div>
+
+    <!-- Раздел "Любят дети" -->
     <div class="menu-item" id="kids">
         <p>Раздел для детей пока пуст</p>
     </div>
     
+    <!-- Футер -->
     <footer>
         <p>&copy; 2025 ДОСТАР. Все права защищены.</p>
     </footer>
