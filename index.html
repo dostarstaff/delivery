@@ -3,183 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню - ДОСТАР</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-        .navbar {
-            background-color: #008000;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .navbar a {
-            color: #ffff00;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 1.5rem;
-            font-weight: bold; /* Жирный шрифт */
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .navbar a:hover {
-            background-color: green;
-        }
-        .menu-buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .menu-button {
-            background-color: #ddd;
-            border: none;
-            padding: 10px 15px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .menu-button:hover, .menu-button.active {
-            background-color: #008000;
-            color: white;
-        }
-        .menu-item {
-            display: none;
-            margin: 20px 0;
-        }
-        .menu-item.active {
-            display: block;
-        }
-        img {
-            width: 100%;
-            max-width: 300px;
-            margin: 10px 0;
-        }
-        .description {
-            font-size: 1.1rem;
-            color: #555;
-        }
-        .btn {
-            display: inline-block;
-            background-color: green;
-            color: #ffff00;
-            font-size: 1.2rem;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background-color: #008000;
-        }
-        #default-text {
-            font-size: 1.2rem;
-            color: #555;
-            margin: 20px 0;
-        }
-        footer {
-            background-color: #008000;
-            color: #ffff00;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        @media (max-width: 600px) {
-            .navbar {
-                justify-content: space-between; /* Кнопки по краям */
-                padding: 10px 20px; /* Добавили отступы по бокам */
-            }
-            .navbar a {
-                padding: 10px 15px;
-                font-size: 1.4rem; /* Увеличили шрифт */
-                position: relative; /* Для разделителя */
-            }
-            .navbar a:first-child::after {
-                content: "";
-                position: absolute;
-                right: -15px; /* Сдвинули полосочку вправо */
-                top: 50%;
-                transform: translateY(-50%);
-                width: 2px;
-                height: 60%;
-                background-color: white; /* Белая полосочка */
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Навигационная панель -->
-    <div class="navbar">
-        <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
-        <a href="contacts.html"><i class="fas fa-phone"></i> Контакты</a>
-    </div>
-
-    <h1>Меню</h1>
+    <header>
+        <button id="theme-toggle">🌙</button>
+        <input type="text" id="search" placeholder="Поиск...">
+        <div id="filters">
+            <select id="price-filter">
+                <option value="all">По цене</option>
+                <option value="low">Низкая</option>
+                <option value="high">Высокая</option>
+            </select>
+            <select id="city-filter">
+                <option value="all">По городу</option>
+                <option value="city1">Город 1</option>
+                <option value="city2">Город 2</option>
+            </select>
+        </div>
+    </header>
     
-    <!-- Кнопки меню -->
-    <div class="menu-buttons">
-        <button class="menu-button" onclick="showMenu('food', event)">Готовая еда</button>
-        <button class="menu-button" onclick="showMenu('desserts', event)">Десерты</button>
-        <button class="menu-button" onclick="showMenu('coffee', event)">Кофе</button>
-        <button class="menu-button" onclick="showMenu('kids', event)">Любят дети</button>
-    </div>
-    
-    <div id="default-text">Выберите, что хотите заказать</div>
-
-    <!-- Раздел "Готовая еда" -->
-    <div class="menu-item" id="food">
-        <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
-            <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad", подробности в WhatsApp. Работаем с 10:00 до 22:00.</div>
-        <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
+    <div class="grid" id="ads">
+        <!-- Карточки объявлений -->
     </div>
 
-    <!-- Раздел "Десерты" -->
-    <div class="menu-item" id="desserts">
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!">
-            <img src="https://i.ibb.co/7x5287Mw/Aynalaiyn.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Выпечка, торты, десерты от кондитерской "Aynalayin", подробности в WhatsApp. Работаем с 09:00 до 22:00.</div>
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
-    </div>
-
-    <!-- Раздел "Кофе" -->
-    <div class="menu-item" id="coffee">
-        <p>Раздел с кофе пока пуст</p>
-    </div>
-
-    <!-- Раздел "Любят дети" -->
-    <div class="menu-item" id="kids">
-        <p>Раздел для детей пока пуст</p>
-    </div>
-    
-    <!-- Футер -->
-    <footer>
-        <p>&copy; 2023 ДОСТАР. Все права защищены.</p>
-    </footer>
-
-    <script>
-        function showMenu(category, event) {
-            let items = document.querySelectorAll('.menu-item');
-            let buttons = document.querySelectorAll('.menu-button');
-            let defaultText = document.getElementById('default-text');
-            
-            items.forEach(item => item.classList.remove('active'));
-            buttons.forEach(button => button.classList.remove('active'));
-            
-            document.getElementById(category).classList.add('active');
-            event.target.classList.add('active');
-            defaultText.style.display = 'none';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
